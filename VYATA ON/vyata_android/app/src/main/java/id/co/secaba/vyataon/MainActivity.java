@@ -64,8 +64,8 @@ public class MainActivity extends Activity {
 
             @Override
             @SuppressWarnings("deprecation")
-            public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view, android.net.Uri url) {
-                return assetLoader.shouldInterceptRequest(url);
+            public android.webkit.WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+                return assetLoader.shouldInterceptRequest(Uri.parse(url));
             }
 
             @Override
